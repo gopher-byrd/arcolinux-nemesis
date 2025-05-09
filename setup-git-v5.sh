@@ -2,7 +2,7 @@
 #
 ##################################################################################################################################
 # Written to be used on 64 bits computers
-# Author 	: 	Erik Dubois
+# Author 	: 	Erik Dubois edit by gopher-byrd for my github
 # Website 	: 	http://www.erikdubois.be
 ##################################################################################################################################
 ##################################################################################################################################
@@ -26,17 +26,17 @@
 
 project=$(basename `pwd`)
 echo "-----------------------------------------------------------------------------"
-echo "this is project https://github.com/erikdubois/"$project
+echo "this is project https://github.com/gopher-byrd/"$project
 echo "-----------------------------------------------------------------------------"
 git config --global pull.rebase false
-git config --global user.name "Erik Dubois"
-git config --global user.email "erik.dubois@gmail.com"
+git config --global user.name "gopher-byrd"
+git config --global user.email "gopher_byrd@pm.me"
 sudo git config --system core.editor nano
 #git config --global credential.helper cache
 #git config --global credential.helper 'cache --timeout=32000'
 git config --global push.default simple
 
-git remote set-url origin git@github.com-edu:erikdubois/$project
+git remote set-url origin git@github.com-edu:gopher-byrd/$project
 
 echo "Everything set"
 
