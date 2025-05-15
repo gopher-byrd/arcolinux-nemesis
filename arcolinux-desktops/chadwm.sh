@@ -46,7 +46,7 @@ fi
 echo
 tput setaf 3
 echo "########################################################################"
-echo "################### Leftwm"
+echo "################### chadwm"
 echo "########################################################################"
 tput sgr0
 echo
@@ -73,7 +73,7 @@ func_install() {
 echo
 tput setaf 2
 echo "########################################################################"
-echo "################### Install leftwm"
+echo "################### Install Chadwm"
 echo "########################################################################"
 tput sgr0
 echo
@@ -82,30 +82,35 @@ echo
 list=(
 alacritty
 archlinux-logout-git
+edu-chadwm-git
+autorandr
+dash
 dmenu
-edu-leftwm-git
-edu-xfce-git
+eww
 feh
-leftwm-git
-leftwm-theme-git
-nitrogen
-noto-fonts
+gcc
+gvfs
+lolcat
+make
 picom-git
 polkit-gnome
-polybar
 rofi
 sxhkd
 thunar
 thunar-archive-plugin
 thunar-volman
 ttf-hack
-ttf-fantasque-sans-mono
-ttf-iosevka-nerd
-ttf-material-design-iconic-font
+ttf-font-awesome
+ttf-jetbrains-mono-nerd
 ttf-meslo-nerd-font-powerlevel10k
-ttf-sourcecodepro-nerd
 volumeicon
+xfce4-notifyd
+xfce4-power-manager
+xfce4-screenshooter
+xfce4-settings
+xfce4-taskmanager
 xfce4-terminal
+xorg-xsetroot
 )
 
 count=0
@@ -116,20 +121,6 @@ for name in "${list[@]}" ; do
     func_install $name
 done
 
-# when on Leftwm
-
-# if [ -f /usr/share/xsessions/leftwm.desktop ]; then
-
-#     echo
-#     tput setaf 2
-#     echo "########################################################################"
-#     echo "################### Leftwm related applications"
-#     echo "########################################################################"
-#     tput sgr0
-#     echo
-
-# fi
-
 echo
 tput setaf 3
 echo "########################################################################"
@@ -139,7 +130,7 @@ echo "########################################################################"
 tput sgr0
 echo
 
-cp -af /etc/skel/.config/leftwm ~/.config/
+cp -af /etc/skel/.config/arco-chadwm ~/.config/
 cp -af /etc/skel/.bin ~
 
 echo

@@ -46,7 +46,7 @@ fi
 echo
 tput setaf 3
 echo "########################################################################"
-echo "################### Leftwm"
+echo "################### Xfce"
 echo "########################################################################"
 tput sgr0
 echo
@@ -73,7 +73,7 @@ func_install() {
 echo
 tput setaf 2
 echo "########################################################################"
-echo "################### Install leftwm"
+echo "################### Install Xfce"
 echo "########################################################################"
 tput sgr0
 echo
@@ -81,31 +81,14 @@ echo
 
 list=(
 alacritty
-archlinux-logout-git
+xfce4
+xfce4-goodies
+#edu-xfce-git
+catfish
 dmenu
-edu-leftwm-git
-edu-xfce-git
-feh
-leftwm-git
-leftwm-theme-git
-nitrogen
-noto-fonts
-picom-git
+mugshot
 polkit-gnome
-polybar
-rofi
-sxhkd
-thunar
-thunar-archive-plugin
-thunar-volman
 ttf-hack
-ttf-fantasque-sans-mono
-ttf-iosevka-nerd
-ttf-material-design-iconic-font
-ttf-meslo-nerd-font-powerlevel10k
-ttf-sourcecodepro-nerd
-volumeicon
-xfce4-terminal
 )
 
 count=0
@@ -116,20 +99,6 @@ for name in "${list[@]}" ; do
     func_install $name
 done
 
-# when on Leftwm
-
-# if [ -f /usr/share/xsessions/leftwm.desktop ]; then
-
-#     echo
-#     tput setaf 2
-#     echo "########################################################################"
-#     echo "################### Leftwm related applications"
-#     echo "########################################################################"
-#     tput sgr0
-#     echo
-
-# fi
-
 echo
 tput setaf 3
 echo "########################################################################"
@@ -138,9 +107,6 @@ echo "Copying all files and folders from /etc/skel/ to ~"
 echo "########################################################################"
 tput sgr0
 echo
-
-cp -af /etc/skel/.config/leftwm ~/.config/
-cp -af /etc/skel/.bin ~
 
 echo
 tput setaf 6
